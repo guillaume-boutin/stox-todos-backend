@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uDtDTYE+kuxfBL+Rf7wxwfjgk7Re7vId5e2vQblBNupTnivyu+2LMil639/1oDT05HlIevsSvp6ZFwyWKfcFnQ==",
+  "dgSpecHash": "zkCNeDEZrdbz47vMbOOTSGEMIiTkzmrYciEdP0fhZxPcEzNB7AuARH0qmF5Col8ycVm4XnUZSxjRFOLePQ1uGg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Guillaume\\Projects\\StoxTodo\\StoxTodoBackend\\Api\\Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Guillaume\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
     "C:\\Users\\Guillaume\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Guillaume\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
     "C:\\Users\\Guillaume\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.13\\microsoft.entityframeworkcore.7.0.13.nupkg.sha512",

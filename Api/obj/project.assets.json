@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "FluentValidation/11.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -518,7 +531,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "FluentValidation": "11.8.0"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -557,6 +571,29 @@
     }
   },
   "libraries": {
+    "FluentValidation/11.8.0": {
+      "sha512": "TiEaaYqSIAS+wXQv46LRm8Mca092XYNePD0n231Hqlkmm5FuToZoWnjI1ef/vJUxBzqR7/k2vaVQXxijNgVKRQ==",
+      "type": "package",
+      "path": "fluentvalidation/11.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.8.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -1534,6 +1571,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Application >= 1.0.0",
+      "FluentValidation >= 11.8.0",
       "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
@@ -1587,6 +1625,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.8.0, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.0, )"

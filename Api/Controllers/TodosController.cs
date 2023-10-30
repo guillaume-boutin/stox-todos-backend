@@ -1,4 +1,5 @@
 using Api.Contracts.Todos;
+using Application.Errors;
 using Application.Repositories;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
@@ -27,7 +28,7 @@ public class TodosController : ControllerBase
     public async Task<IActionResult> Get([FromRoute] int id)
     {
         var todo = await _todosRepository.Get(id);
-        if (todo is null) return NotFound();
+        if (todo is null) throw new NotFoundError();
 
         return Ok(todo);
     }
@@ -37,6 +38,10 @@ public class TodosController : ControllerBase
         [FromBody] SaveTodoRequest request
     )
     {
+        var validator = new SaveTodoRequestValidator();
+        var validationResult = validator.Validate(request);
+        if (!validationResult.IsValid) throw new ValidationError(validationResult.Errors);
+
         var todo = new Todo()
         {
             Title = request.Title
@@ -53,7 +58,7 @@ public class TodosController : ControllerBase
     )
     {
         var todo = await _todosRepository.Get(id);
-        if (todo is null) return NotFound();
+        if (todo is null) throw new NotFoundError();
 
         todo.Title = request.Title;
         await _todosRepository.Update(todo);

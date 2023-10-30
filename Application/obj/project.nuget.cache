@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "M1agZaPPqwEDmrvpzM57J6w+lQs9XdsPaMUoEAmRQk+iMxzLcKll1WtN9ki5ei/aNoMLledEUG2E/xwjxYhBrA==",
+  "dgSpecHash": "hWo80PeZ9qcdM6vhrxNLcnBaaPdWw0wlPHaTNd+d3z2L7f03Aj1+2jH2mBPl+xrQtbAW9CCs6k6MZBLNY6XCRA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Guillaume\\Projects\\StoxTodo\\StoxTodoBackend\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Guillaume\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512"
+  ],
   "logs": []
 }
