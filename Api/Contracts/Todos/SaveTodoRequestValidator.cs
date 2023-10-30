@@ -6,6 +6,6 @@ public class SaveTodoRequestValidator : AbstractValidator<SaveTodoRequest>
 {
     public SaveTodoRequestValidator()
     {
-        RuleFor(x => x.Title).NotEmpty().MinimumLength(2).MinimumLength(255);
+        RuleFor(x => x.Title).NotEmpty().MinimumLength(2).MaximumLength(255);
     }
 }

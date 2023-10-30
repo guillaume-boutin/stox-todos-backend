@@ -3,8 +3,10 @@
   "packageManager": "yarn@3.4.1",
   "scripts": {
     "dev": "dotnet run --project ./Api",
-    "migrate:run": "dotnet ef database update -p ./Infrastructure -s ./Api",
-    "migrate:make": "dotnet ef migrations add $0 -p Infrastructure -s Api -o Persistence/Migrations",
+    "pg:up": "docker-compose up -d",
+    "pg:down": "docker-compose down",
+    "migrate:add": "dotnet ef migrations add $0 -p Infrastructure -s Api -o Persistence/Migrations",
+    "migrate:update": "dotnet ef database update -p ./Infrastructure -s ./Api",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

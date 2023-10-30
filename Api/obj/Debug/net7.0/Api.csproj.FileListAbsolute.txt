@@ -48,3 +48,6 @@ C:\Users\Guillaume\Projects\StoxTodo\StoxTodoBackend\Api\bin\Debug\net7.0\System
 C:\Users\Guillaume\Projects\StoxTodo\StoxTodoBackend\Api\bin\Debug\net7.0\Infrastructure.dll
 C:\Users\Guillaume\Projects\StoxTodo\StoxTodoBackend\Api\bin\Debug\net7.0\Infrastructure.pdb
 C:\Users\Guillaume\Projects\StoxTodo\StoxTodoBackend\Api\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\Guillaume\Projects\StoxTodo\StoxTodoBackend\Api\bin\Debug\net7.0\Mapster.dll
+C:\Users\Guillaume\Projects\StoxTodo\StoxTodoBackend\Api\bin\Debug\net7.0\Mapster.Core.dll
+C:\Users\Guillaume\Projects\StoxTodo\StoxTodoBackend\Api\bin\Debug\net7.0\Mapster.DependencyInjection.dll

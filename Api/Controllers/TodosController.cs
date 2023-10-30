@@ -2,6 +2,7 @@ using Api.Contracts.Todos;
 using Application.Errors;
 using Application.Repositories;
 using Domain;
+using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -11,10 +12,12 @@ namespace Api.Controllers;
 public class TodosController : ControllerBase
 {
     private readonly ITodosRepository _todosRepository;
+    private readonly IMapper _mapper;
 
-    public TodosController(ITodosRepository todosRepository)
+    public TodosController(ITodosRepository todosRepository, IMapper mapper)
     {
         _todosRepository = todosRepository;
+        _mapper = mapper;
     }
 
     [HttpGet]
@@ -42,10 +45,7 @@ public class TodosController : ControllerBase
         var validationResult = validator.Validate(request);
         if (!validationResult.IsValid) throw new ValidationError(validationResult.Errors);
 
-        var todo = new Todo()
-        {
-            Title = request.Title
-        };
+        var todo = _mapper.Map<Todo>(request);
         await _todosRepository.Create(todo);
 
         return CreatedAtAction(nameof(Get), new { id = todo.Id }, todo);
@@ -60,7 +60,7 @@ public class TodosController : ControllerBase
         var todo = await _todosRepository.Get(id);
         if (todo is null) throw new NotFoundError();
 
-        todo.Title = request.Title;
+        todo = _mapper.Map<SaveTodoRequest, Todo>(request, todo);
         await _todosRepository.Update(todo);
 
         return Ok(todo);

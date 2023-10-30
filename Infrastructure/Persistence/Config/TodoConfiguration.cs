@@ -11,5 +11,6 @@ public class TodoConfiguration : IEntityTypeConfiguration<Todo>
         b.ToTable("todos");
         b.Property(x => x.Id).HasColumnName("id");
         b.Property(x => x.Title).HasColumnName("title").HasColumnType("varchar(255)");
+        b.Property(x => x.Done).HasColumnName("done");
     }
 }

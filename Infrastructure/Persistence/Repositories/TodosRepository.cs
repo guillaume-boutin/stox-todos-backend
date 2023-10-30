@@ -16,7 +16,7 @@ public class TodosRepository : ITodosRepository
     public async Task<List<Todo>> List()
     {
         var query = _db.Todos.AsQueryable();
-        return await query.ToListAsync();
+        return await query.OrderBy(x => x.Id).ToListAsync();
     }
 
     public async Task<Todo?> Get(int id)
