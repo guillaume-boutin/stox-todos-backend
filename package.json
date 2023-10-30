@@ -1,0 +1,10 @@
+{
+  "name": "stoxtodobackend",
+  "packageManager": "yarn@3.4.1",
+  "scripts": {
+    "dev": "dotnet run --project ./Api",
+    "migrate:run": "dotnet ef database update -p ./Infrastructure -s ./Api",
+    "migrate:make": "dotnet ef migrations add $0 -p Infrastructure -s Api -o Persistence/Migrations",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

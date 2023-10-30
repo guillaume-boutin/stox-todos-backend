@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16.0
+    restart: always
+    environment:
+      POSTGRES_USER: stox
+      POSTGRES_PASSWORD: stox
+    ports:
+      - "54321:5432"
+    volumes:
+      - stoxpg:/var/lib/postgresql/data
+
+volumes:
+  stoxpg:
