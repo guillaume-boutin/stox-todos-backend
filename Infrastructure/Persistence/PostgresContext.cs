@@ -13,7 +13,7 @@ public class PostgresContext : DbContext
         Configuration = configuration;
     }
 
-    public DbSet<Todo> Todo { get; set; } = null!;
+    public DbSet<Todo> Todos { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {

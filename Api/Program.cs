@@ -1,3 +1,4 @@
+using Infrastructure;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<PostgresContext>();
+builder.Services.AddInfrastructure();
 
 var app = builder.Build();
 
